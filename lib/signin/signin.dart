@@ -31,7 +31,9 @@ class _LoginPageState extends State<LoginPage> {
       if (phone == '0799999999' && password == '123456@') {
         // نجاح الدخول -> انتقل لصفحة الملف الشخصي
         Navigator.pushReplacementNamed(context, '/profile');
-        // يجب تعريف '/profile' في routes داخل main.dart
+      } else if (phone == '0788888888' && password == '123456@') {
+        // نجاح الدخول -> انتقل لصفحة ملف مندوب التوصيل
+        Navigator.pushReplacementNamed(context, '/profileDeliveryMan');
       } else {
         // عرض رسالة خطأ
         ScaffoldMessenger.of(context).showSnackBar(
@@ -63,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                   Container(
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.black, // خلفية سوداء
+                      color: Colors.black,
                     ),
                     padding: EdgeInsets.all(4),
                     child: CircleAvatar(
@@ -135,8 +137,8 @@ class _LoginPageState extends State<LoginPage> {
                   ElevatedButton(
                     onPressed: _login,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFFC7923E), // زر ذهبي
-                      foregroundColor: Colors.black, // نص الزر أسود
+                      backgroundColor: Color(0xFFC7923E),
+                      foregroundColor: Colors.black,
                       padding: EdgeInsets.symmetric(
                         horizontal: 40,
                         vertical: 15,

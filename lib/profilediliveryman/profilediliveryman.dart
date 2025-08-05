@@ -3,8 +3,8 @@ import 'package:waselbaman/creatshipment/createShippingRequest.dart';
 import 'package:waselbaman/manageshipments/manageshipments.dart';
 import 'package:waselbaman/trchnicalsupport/technicalsupport.dart';
 
-class Profilediliveryman extends StatelessWidget {
-  const Profilediliveryman({super.key});
+class ProfileDeliveryManPage extends StatelessWidget {
+  const ProfileDeliveryManPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class Profilediliveryman extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             const Text(
-              "Hello, Abdelghani Mohamed Salem  zakaria ",
+              "Hello, Abdelghani Mohamed Salem Zakaria",
               style: TextStyle(
                 color: Color(0xFFC7923E),
                 fontSize: 20,
@@ -37,20 +37,19 @@ class Profilediliveryman extends StatelessWidget {
             ),
             const SizedBox(height: 15),
             const Text(
-              "Phone: 0799999999",
+              "Phone: 07888888888",
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
             const Text(
-              "Email: smsa@project.com",
+              "Email: Aaa@project.com",
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
             const Text(
-              "Address: Amman",
+              "Address: Alzarqa",
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
             const SizedBox(height: 30),
 
-            // زر إدارة الشحنات
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -63,12 +62,11 @@ class Profilediliveryman extends StatelessWidget {
                 foregroundColor: Colors.black,
                 minimumSize: const Size(double.infinity, 50),
               ),
-              child: const Text("view aproved requests"),
+              child: const Text("View Approved Requests"),
             ),
 
             const SizedBox(height: 10),
 
-            // زر إنشاء شحنة
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -83,12 +81,11 @@ class Profilediliveryman extends StatelessWidget {
                 foregroundColor: Colors.black,
                 minimumSize: const Size(double.infinity, 50),
               ),
-              child: const Text("view shipment"),
+              child: const Text("View Shipment"),
             ),
 
             const SizedBox(height: 10),
 
-            // زر الدعم الفني
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -106,7 +103,6 @@ class Profilediliveryman extends StatelessWidget {
 
             const Spacer(),
 
-            // زر تسجيل الخروج
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamedAndRemoveUntil(

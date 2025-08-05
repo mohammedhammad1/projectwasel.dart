@@ -80,7 +80,7 @@ class _HomeState extends State<Home> {
               leading: const Icon(Icons.support_agent),
               title: const Text('Technical Support'),
               onTap: () {
-                Navigator.pop(context); // اغلاق الدروير قبل التنقل
+                Navigator.pop(context);
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const SupportPage()),

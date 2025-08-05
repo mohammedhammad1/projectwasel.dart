@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:waselbaman/home/home.dart';
-// هذا المسار حسب ما ذكرت، تأكد من صحته
 import 'package:waselbaman/profilemanagershipment/profilemanager.dart';
 import 'package:waselbaman/signin/signin.dart';
 import 'package:waselbaman/signup/signup.dart';
+import 'package:waselbaman/profilediliveryman/profilediliveryman.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,9 +19,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => Home(),
         '/login': (context) => LoginPage(),
         '/signup': (context) => SignupPage(),
-        '/profile':
-            (context) =>
-                const ProfilePage(), // هنا استخدم ProfilePage وليس ProfileManagerPage
+        '/profile': (context) => const ProfilePage(),
+        '/profileDeliveryMan': (context) => ProfileDeliveryManPage(),
       },
     );
   }
