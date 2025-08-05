@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-// استورد صفحة الملف الشخصي إذا كانت في ملف مختلف
-// import 'profile_page.dart';
-
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -48,11 +45,11 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('login', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color(0xFFC7923E), // ذهبي
+        backgroundColor: Color(0xFFC7923E),
         iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Container(
-        color: Colors.black, // خلفية سوداء
+        color: Colors.black,
         padding: EdgeInsets.all(20),
         child: Center(
           child: SingleChildScrollView(
@@ -61,7 +58,6 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // الصورة مثل صفحة signup
                   Container(
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
@@ -80,10 +76,7 @@ class _LoginPageState extends State<LoginPage> {
 
                   Text(
                     "If you have an account, you're awesome - better than those who don't have one.",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Color(0xFFC7923E), // نص ذهبي
-                    ),
+                    style: TextStyle(fontSize: 20, color: Color(0xFFC7923E)),
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 30),
