@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:waselbaman/adminprofile/adminprofile.dart';
 import 'package:waselbaman/home/home.dart';
 import 'package:waselbaman/profilemanagershipment/profilemanager.dart';
 import 'package:waselbaman/signin/signin.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/signup': (context) => SignupPage(),
         '/profile': (context) => const ProfilePage(),
         '/profileDeliveryMan': (context) => ProfileDeliveryManPage(),
+        '/adminprofile': (context) => const Adminprofile(),
       },
     );
   }

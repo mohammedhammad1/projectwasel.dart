@@ -9,8 +9,9 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color.fromARGB(255, 70, 46, 41),
       appBar: AppBar(
+        centerTitle: true,
         title: const Text("Profile", style: TextStyle(color: Colors.white)),
         backgroundColor: const Color(0xFFC7923E),
         automaticallyImplyLeading: false,
@@ -88,20 +89,28 @@ class ProfilePage extends StatelessWidget {
 
             const SizedBox(height: 10),
 
-            // زر الدعم الفني
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const SupportPage()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFC7923E),
-                foregroundColor: Colors.black,
-                minimumSize: const Size(double.infinity, 50),
+            // نص الدعم الفني القابل للنقر
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SupportPage(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  "Technical Support",
+                  style: TextStyle(
+                    color: Color(0xFFC7923E),
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
               ),
-              child: const Text("Technical Support"),
             ),
 
             const Spacer(),

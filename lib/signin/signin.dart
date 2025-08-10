@@ -31,6 +31,9 @@ class _LoginPageState extends State<LoginPage> {
       } else if (phone == '0788888888' && password == '123456@') {
         // نجاح الدخول -> انتقل لصفحة ملف مندوب التوصيل
         Navigator.pushReplacementNamed(context, '/profileDeliveryMan');
+      } else if (phone == '0777777777' && password == '123456@') {
+        // ادمن يدخل على صفحة الادمن
+        Navigator.pushReplacementNamed(context, '/adminprofile');
       } else {
         // عرض رسالة خطأ
         ScaffoldMessenger.of(context).showSnackBar(

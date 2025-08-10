@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:waselbaman/trackshipmentinfo/trackshipinfo.dart'; // استبدل waselbaman باسم مشروعك الحقيقي
-import 'package:waselbaman/trchnicalsupport/technicalsupport.dart'; // استيراد صفحة الدعم الفني
+import 'package:waselbaman/pricescalculator/pricescalculator.dart';
+import 'package:waselbaman/servicesoverview/servicesoverview.dart';
+import 'package:waselbaman/trackshipmentinfo/trackshipinfo.dart';
+import 'package:waselbaman/trchnicalsupport/technicalsupport.dart';
+import 'package:waselbaman/aboutus/aboutus.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -45,8 +48,10 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 190, 136, 50),
-        title: const Text('Home'),
+        title: const Text('Wasel B Aman'),
+        titleTextStyle: TextStyle(fontSize: 30, color: Colors.black),
       ),
       drawer: Drawer(
         child: ListView(
@@ -62,19 +67,42 @@ class _HomeState extends State<Home> {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Home'),
-              onTap: () => _navigateTo('Home', context),
+              leading: const Icon(Icons.photo_library),
+              title: const Text('Services Overview'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Servicesoverview(),
+                  ),
+                );
+              },
             ),
+
             ListTile(
               leading: const Icon(Icons.info),
               title: const Text('About Us'),
-              onTap: () => _navigateTo('About Us', context),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Aboutus()),
+                );
+              },
             ),
             ListTile(
-              leading: const Icon(Icons.build),
-              title: const Text('Services'),
-              onTap: () => _navigateTo('Services', context),
+              leading: const Icon(Icons.attach_money),
+              title: const Text('Prices'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const PriceCalculatorPage(),
+                  ),
+                );
+              },
             ),
             ListTile(
               leading: const Icon(Icons.support_agent),
